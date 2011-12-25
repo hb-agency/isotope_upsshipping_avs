@@ -1,0 +1,17 @@
+<div id="mb_<?php echo $this->popupId; ?>">
+
+<div id="<?php echo $this->popupId; ?>">
+<input type="hidden" name="UPSAVS_SUBMIT" value="<?php echo $this->formSubmit; ?>" />
+
+<h2 class="error"><?php echo $this->headline; ?></h2>
+<div class="address_container">
+<?php foreach($this->addresses as $key=>$address): ?>
+<span class="radio_container">
+<input type="radio" name="<?php echo $this->radioId; ?>" value="<?php echo $key; ?>" id="ctrl_<?php echo $this->radioId; ?>_<?php echo $key; ?>" />
+<label for="ctrl_<?php echo $this->radioId; ?>_<?php echo $key; ?>"><?php echo $address['label']; ?></label>
+</span>
+<?php endforeach; ?>
+</div>
+</div>
+
+</div>
